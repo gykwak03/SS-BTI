@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.start-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.start-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.start-button:active {
+    background-color: #3e8e41;
+    transform: scale(0.95);
+}
