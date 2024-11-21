@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFQ Step 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .food-category label {
+            display: block;
+            margin: 5px 0;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Food Selection</h1>
+    <p>Select the foods you consume regularly:</p>
+    <div class="food-category">
+        <h2>Sodium-rich Foods</h2>
+        <label><input type="checkbox" value="Cheese"> Cheese</label>
+        <label><input type="checkbox" value="Cookies/Crackers/Snacks"> Cookies/Crackers/Snacks</label>
+        <label><input type="checkbox" value="Instant Noodles"> Instant Noodles</label>
+        <label><input type="checkbox" value="Soups"> Soups</label>
+        <label><input type="checkbox" value="Stews"> Stews</label>
+        <label><input type="checkbox" value="Canned Fish"> Canned Fish</label>
+        <label><input type="checkbox" value="Kimchi"> Kimchi</label>
+        
+        <h2>Sugar-rich Foods</h2>
+        <label><input type="checkbox" value="Bread"> Bread</label>
+        <label><input type="checkbox" value="Jam/Honey/Syrup"> Jam/Honey/Syrup</label>
+        <label><input type="checkbox" value="Cereal"> Cereal</label>
+        <label><input type="checkbox" value="Juice"> Juice</label>
+        <label><input type="checkbox" value="Ice Cream"> Ice Cream</label>
+        <label><input type="checkbox" value="Candy/Chocolate"> Candy/Chocolate</label>
+    </div>
+    <button class="btn" onclick="saveSelection()">Next</button>
+
+    <script>
+        function saveSelection() {
+            const selectedFoods = [];
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            checkboxes.forEach(checkbox => {
+                selectedFoods.push(checkbox.value);
+            });
+
+            if (selectedFoods.length === 0) {
+                alert("Please select at least one food item.");
+                return;
+            }
+
+            localStorage.setItem("selectedFoods", JSON.stringify(selectedFoods));
+            window.location.href = "FFQ2.html";
+        }
+    </script>
+</body>
+</html>
+
