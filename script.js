@@ -130,8 +130,7 @@ function saveResponse(question, answer) {
     }
 }
 
-// 결과 페이지에 응답 표시
-function displayResults() {
+function displayResultsAndSave() {
     // LocalStorage에서 데이터를 가져오기
     const responses = JSON.parse(localStorage.getItem('responses')) || {};
     const ffqResponses = JSON.parse(localStorage.getItem('ffqResponses')) || {};
@@ -158,11 +157,20 @@ function displayResults() {
         }
     }
 
-    // 응답이 없을 때 메시지 표시
-    if (!responseList.hasChildNodes()) {
-        const li = document.createElement("li");
-        li.textContent = "저장된 응답이 없습니다. 설문을 완료하세요.";
-        responseList.appendChild(li);
+    // Google Sheets에 저장할 데이터 포맷팅
+    const dataToSave = [["Question", "Answer"]]; // 헤더 추가
+    for (const [question, answer] of Object.entries(responses)) {
+        dataToSave.push([question, answer]);
     }
+
+    if (Object.keys(ffqResponses).length > 0) {
+        dataToSave.push(["FFQ Responses", ""]); // FFQ 헤더
+        for (const [food, frequency] of Object.entries(ffqResponses)) {
+            dataToSave.push([food, frequency]);
+        }
+    }
+
+    // Google Sheets에 데이터 저장
+    saveToGoogleSheets(dataToSave);
 }
 
