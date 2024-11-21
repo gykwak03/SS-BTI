@@ -1,3 +1,4 @@
+//script.js
 const API_KEY = "AIzaSyCxA_a8hpDVRVLt0cGdwwyXbTsUwMOywcw"; // Google API 키
 const SHEET_ID = "12L-3x6YYlgOFC1667c0S_5rZ_Ed7t3mJKygbvOOEUh4"; // Google Sheets ID
 
@@ -103,5 +104,65 @@ function saveToGoogleSheets(data) {
         .catch((error) => {
             console.error("Error saving data:", error);
         });
+}
+
+// 시작 버튼 클릭 시 첫 번째 질문으로 이동
+function startQuiz() {
+    window.location.href = "question1.html";
+}
+
+// 응답을 저장하는 함수
+function saveResponse(question, answer) {
+    // 기존 데이터를 가져오기
+    const responses = JSON.parse(localStorage.getItem('responses')) || {};
+
+    // 응답 저장
+    responses[question] = answer;
+
+    // 업데이트된 데이터를 localStorage에 저장
+    localStorage.setItem('responses', JSON.stringify(responses));
+
+    // 다음 페이지로 이동
+    if (question === "question1") {
+        window.location.href = "question2.html";
+    } else if (question === "question2") {
+        window.location.href = "FFQ1.html"; // FFQ 단계로 이동
+    }
+}
+
+// 결과 페이지에 응답 표시
+function displayResults() {
+    // LocalStorage에서 데이터를 가져오기
+    const responses = JSON.parse(localStorage.getItem('responses')) || {};
+    const ffqResponses = JSON.parse(localStorage.getItem('ffqResponses')) || {};
+
+    const responseList = document.getElementById("response-list");
+
+    // 기존 질문 응답 표시
+    for (const [question, answer] of Object.entries(responses)) {
+        const li = document.createElement("li");
+        li.textContent = `${question}: ${answer}`;
+        responseList.appendChild(li);
+    }
+
+    // FFQ 응답 표시
+    if (Object.keys(ffqResponses).length > 0) {
+        const ffqHeader = document.createElement("h3");
+        ffqHeader.textContent = "FFQ 응답:";
+        responseList.appendChild(ffqHeader);
+
+        for (const [food, frequency] of Object.entries(ffqResponses)) {
+            const li = document.createElement("li");
+            li.textContent = `${food}: ${frequency}`;
+            responseList.appendChild(li);
+        }
+    }
+
+    // 응답이 없을 때 메시지 표시
+    if (!responseList.hasChildNodes()) {
+        const li = document.createElement("li");
+        li.textContent = "저장된 응답이 없습니다. 설문을 완료하세요.";
+        responseList.appendChild(li);
+    }
 }
 
