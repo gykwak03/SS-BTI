@@ -13,6 +13,19 @@ function saveAnswersAndNext(startQuestion, endQuestion, nextPage) {
     window.location.href = nextPage;
 }
 
+function saveAnswers(startQuestion, endQuestion) {
+    for (let i = startQuestion; i <= endQuestion; i++) {
+        const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+        if (!selectedOption) {
+            alert(`문항 ${i}에 응답해 주세요.`);
+            return false; // 응답되지 않은 경우 저장 중단
+        }
+        // 응답된 값 로컬 스토리지에 저장
+        localStorage.setItem(`q${i}`, selectedOption.value);
+    }
+    return true; // 모든 응답이 저장됨
+}
+
 function calculateAndRedirect() {
     // 나트륨 문항 (1-10, 21-30)
     let sodiumScore = 0;
@@ -41,5 +54,12 @@ function calculateAndRedirect() {
         window.location.href = "../results/result3.html"; // result3.html 경로
     } else {
         window.location.href = "../results/result4.html"; // result4.html 경로
+    }
+}
+
+function handleFinalPageSubmit() {
+    const allAnswersSaved = saveAnswers(36, 40);
+    if (allAnswersSaved) {
+        calculateAndRedirect(); // 저장이 완료되면 결과 페이지로 이동
     }
 }

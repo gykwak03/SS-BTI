@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>식습관 설문조사</h1>
-    <form onsubmit="event.preventDefault(); calculateAndRedirect();">
+    <form id="survey-form" onsubmit="event.preventDefault(); handleFinalPageSubmit();">
         <h3>36. 나는 평소 즐겨 먹던 단 음식(각종 디저트, 과자 등)에서 단 맛이 줄어들면 맛이 없어질 것이라고 생각한다.</h3>
         <label><input type="radio" name="q36" value="1"> 매우 그렇지 않다</label>
         <label><input type="radio" name="q36" value="2"> 그렇지 않다</label>
