@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 - 7</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+</head>
+<body>
+    <h1>식습관 설문조사</h1>
+    <form onsubmit="event.preventDefault(); saveAnswersAndNext(31, 35, 'page8.html');">
+        <h3>31. 카페에서 주문할 때, 덜 달게 먹으려고 노력하지 않는다.</h3>
+        <label><input type="radio" name="q31" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q31" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q31" value="3"> 보통이다</label>
+        <label><input type="radio" name="q31" value="4"> 그렇다</label>
+        <label><input type="radio" name="q31" value="5"> 매우 그렇다</label>
+
+        <h3>32. 나는 주변에 단 음식이 많을 때 단 음식을 먹게 된다.</h3>
+        <label><input type="radio" name="q32" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q32" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q32" value="3"> 보통이다</label>
+        <label><input type="radio" name="q32" value="4"> 그렇다</label>
+        <label><input type="radio" name="q32" value="5"> 매우 그렇다</label>
+
+        <h3>33. 나는 집에서 군것질로 단 음식을 자주 섭취하는 등 평소 달게 먹는 편이다.</h3>
+        <label><input type="radio" name="q33" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q33" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q33" value="3"> 보통이다</label>
+        <label><input type="radio" name="q33" value="4"> 그렇다</label>
+        <label><input type="radio" name="q33" value="5"> 매우 그렇다</label>
+
+        <h3>34. 나는 식사 후에 단 디저트를 먹는다.</h3>
+        <label><input type="radio" name="q34" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q34" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q34" value="3"> 보통이다</label>
+        <label><input type="radio" name="q34" value="4"> 그렇다</label>
+        <label><input type="radio" name="q34" value="5"> 매우 그렇다</label>
+
+        <h3>35. 나는 음식을 만들 때 설탕, 꿀, 물엿 등을 신경 쓰지 않고 사용한다.</h3>
+        <label><input type="radio" name="q35" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q35" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q35" value="3"> 보통이다</label>
+        <label><input type="radio" name="q35" value="4"> 그렇다</label>
+        <label><input type="radio" name="q35" value="5"> 매우 그렇다</label>
+
+        <div class="button-group">
+            <button type="button" onclick="history.back()">이전</button>
+            <button type="submit">다음</button>
+        </div>
+    </form>
+</body>
+</html>

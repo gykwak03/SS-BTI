@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 - 1</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+</head>
+<body>
+    <h1>식품 섭취 빈도 조사</h1>
+    <form onsubmit="event.preventDefault(); saveAnswersAndNext(1, 5, 'page2.html');">
+        <h3>1. <span class="underline">스낵류(감자칩, 프레첼, 나쵸 등)</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q1" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q1" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q1" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q1" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q1" value="5"> 1일 1회 이상</label>
+
+        <h3>2. <span class="underline">국수류 또는 라면류(잔치국수, 칼국수 등)</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q2" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q2" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q2" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q2" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q2" value="5"> 1일 1회 이상</label>
+
+        <h3>3. <span class="underline">국류 또는 찌개류</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q3" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q3" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q3" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q3" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q3" value="5"> 1일 1회 이상</label>
+
+        <h3>4. <span class="underline">피자류 또는 햄버거류</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q4" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q4" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q4" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q4" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q4" value="5"> 1일 1회 이상</label>
+
+        <h3>5. <span class="underline">가공육류 (햄, 소시지 등)</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q5" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q5" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q5" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q5" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q5" value="5"> 1일 1회 이상</label>
+
+        <div class="button-group">
+            <button type="button" onclick="history.back()">이전</button>
+            <button type="submit">다음</button>
+        </div>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 - 5</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+</head>
+<body>
+    <h1>식습관 설문조사</h1>
+    <form onsubmit="event.preventDefault(); saveAnswersAndNext(21, 25, 'page6.html');">
+        <h3>21. 음식이 충분히 짜지 않으면 만족하지 못한다.</h3>
+        <label><input type="radio" name="q21" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q21" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q21" value="3"> 보통이다</label>
+        <label><input type="radio" name="q21" value="4"> 그렇다</label>
+        <label><input type="radio" name="q21" value="5"> 매우 그렇다</label>
+
+        <h3>22. 나는 음식을 조리할 때 레시피에 제시된 정량보다 소금, 간장 등을 더욱 추가한다.</h3>
+        <label><input type="radio" name="q22" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q22" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q22" value="3"> 보통이다</label>
+        <label><input type="radio" name="q22" value="4"> 그렇다</label>
+        <label><input type="radio" name="q22" value="5"> 매우 그렇다</label>
+
+        <h3>23. 회, 전, 튀김 등에 고추장, 케찹, 돈까스 소스 등의 소스류를 듬뿍 찍어 먹는다.</h3>
+        <label><input type="radio" name="q23" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q23" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q23" value="3"> 보통이다</label>
+        <label><input type="radio" name="q23" value="4"> 그렇다</label>
+        <label><input type="radio" name="q23" value="5"> 매우 그렇다</label>
+
+        <h3>24. 외식할 때 음식이 싱겁다고 느껴지면 소금이나 소스를 추가하는 편이다.</h3>
+        <label><input type="radio" name="q24" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q24" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q24" value="3"> 보통이다</label>
+        <label><input type="radio" name="q24" value="4"> 그렇다</label>
+        <label><input type="radio" name="q24" value="5"> 매우 그렇다</label>
+
+        <h3>25. 음식을 먹을 때 다른 사람들보다 간이 세다고 느끼는 경우가 많다.</h3>
+        <label><input type="radio" name="q25" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q25" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q25" value="3"> 보통이다</label>
+        <label><input type="radio" name="q25" value="4"> 그렇다</label>
+        <label><input type="radio" name="q25" value="5"> 매우 그렇다</label>
+
+        <div class="button-group">
+            <button type="button" onclick="history.back()">이전</button>
+            <button type="submit">다음</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 - 6</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+</head>
+<body>
+    <h1>식습관 설문조사</h1>
+    <form onsubmit="event.preventDefault(); saveAnswersAndNext(26, 30, 'page7.html');">
+        <h3>26. 가공식품 구매 시 나트륨 함량을 확인한 적이 없다.</h3>
+        <label><input type="radio" name="q26" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q26" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q26" value="3"> 보통이다</label>
+        <label><input type="radio" name="q26" value="4"> 그렇다</label>
+        <label><input type="radio" name="q26" value="5"> 매우 그렇다</label>
+
+        <h3>27. 외식 시 음식의 간이 세도 그냥 먹는다. (싱겁게 해달라고 요청하지 않는다).</h3>
+        <label><input type="radio" name="q27" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q27" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q27" value="3"> 보통이다</label>
+        <label><input type="radio" name="q27" value="4"> 그렇다</label>
+        <label><input type="radio" name="q27" value="5"> 매우 그렇다</label>
+
+        <h3>28. 저염간장, 저염된장 등 저염제품을 별도로 사용하지 않는다.</h3>
+        <label><input type="radio" name="q28" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q28" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q28" value="3"> 보통이다</label>
+        <label><input type="radio" name="q28" value="4"> 그렇다</label>
+        <label><input type="radio" name="q28" value="5"> 매우 그렇다</label>
+
+        <h3>29. 양념이 가미된 즉석조리식품 및 HMR 식품을 즐겨 먹는 편이다.</h3>
+        <label><input type="radio" name="q29" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q29" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q29" value="3"> 보통이다</label>
+        <label><input type="radio" name="q29" value="4"> 그렇다</label>
+        <label><input type="radio" name="q29" value="5"> 매우 그렇다</label>
+
+        <h3>30. 라면, 햄버거, 샌드위치 등에 기재되어 있는 나트륨 함량 비교 표시를 별도로 확인하지 않는다.</h3>
+        <label><input type="radio" name="q30" value="1"> 매우 그렇지 않다</label>
+        <label><input type="radio" name="q30" value="2"> 그렇지 않다</label>
+        <label><input type="radio" name="q30" value="3"> 보통이다</label>
+        <label><input type="radio" name="q30" value="4"> 그렇다</label>
+        <label><input type="radio" name="q30" value="5"> 매우 그렇다</label>
+
+        <div class="button-group">
+            <button type="button" onclick="history.back()">이전</button>
+            <button type="submit">다음</button>
+        </div>
+    </form>
+</body>
+</html>

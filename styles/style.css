@@ -1,0 +1,192 @@
+/* 공통 스타일 */
+
+/* 버튼 스타일 */
+/* 버튼 스타일 */
+.start-button {
+    background-color: #85b78b;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    display: block; /* 블록 형식으로 변경 */
+    margin: 20px auto; /* 상하 여백 20px, 좌우 자동 정렬 */
+    text-align: center; /* 버튼 내용 중앙 정렬 */
+}
+
+/* 버튼 호버 스타일 */
+.start-button:hover {
+    background-color: #5e8c62; /* 더 어두운 녹색 */
+    transform: scale(1.05); /* 버튼 확대 효과 */
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f5e7; /* 부드러운 크림 배경 */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 제목 스타일 */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #4d4d4d;
+}
+h2{
+    text-align: center;
+}
+
+h6 {
+    font-size: 3em; /* 글씨 크기를 조정 */
+    font-weight: bold; /* 글씨 두께를 굵게 */
+    text-align: center; /* 가운데 정렬 */
+    margin-top: -10px;
+    margin-bottom: 20px; /* 아래 여백 */
+    color: #333; /* 글씨 색상 */
+}
+
+.underline {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* 설문조사 박스 */
+form {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff; /* 흰색 박스 */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+
+/* 질문 스타일 */
+form p, form h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* 선택지 스타일 */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #666;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* 버튼 그룹 정렬 */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"] {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+button[type="button"]:hover {
+    background-color: #dcdcdc;
+}
+
+button[type="submit"] {
+    background-color: #85b78b;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #5e8c62;
+}
+
+
+
+
+
+
+
+
+
+/*결과 CSS*/
+
+/* 결과 페이지 이미지 스타일 */
+.result-image {
+    width: 300px; /* 이미지 너비 */
+    height: auto; /* 비율 유지 */
+    display: block; /* 블록 형식 */
+    margin: 20px auto; /* 중앙 정렬 */
+    border-radius: 15px; /* 부드러운 모서리 */
+}
+
+.result-box {
+    max-width: 600px; /* 박스의 최대 너비 */
+    margin: 50px auto; /* 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+    background-color: #ffffff; /* 흰색 배경 */
+    border-radius: 15px; /* 부드러운 모서리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-family: 'Arial', sans-serif; /* 글꼴 */
+}
+
+/* 결과 제목 스타일 (선택적으로 수정 가능) */
+.result-box h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+/* 결과 설명 스타일 */
+.result-box p {
+    font-size: 1.2em;
+    color: #555555;
+    margin: 10px 0;
+}
+
+/* 버튼 스타일 */
+.result-box button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #85b78b; /* 녹색 버튼 */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.result-box button:hover {
+    background-color: #5e8c62; /* 더 어두운 녹색 */
+}

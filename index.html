@@ -1,18 +1,24 @@
-<!--index.html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+
 </head>
 <body>
-    <h1>SS-BTI 식습관 MBTI</h1>
+    <h1>SS-BTI </h1>
+    <h2>내 식습관 유형은 뭘까?</h2>
     <button class="start-button" onclick="startQuiz()">Start</button>
 
-    <script src="script.js"></script>
+    <script>
+        function startQuiz() {
+            window.location.href = "surveys/page1.html"; /* page1.html로 이동 */
+        }
+    </script>
 </body>
 </html>
+
 
 

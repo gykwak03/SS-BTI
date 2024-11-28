@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 - 3</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+</head>
+<body>
+    <h1>식품 섭취 빈도 조사</h1>
+    <form onsubmit="event.preventDefault(); saveAnswersAndNext(11, 15, 'page4.html');">
+        <h3>11. <span class="underline">빵류(단팥빵, 소보로빵 등)</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q11" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q11" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q11" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q11" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q11" value="5"> 1일 1회 이상</label>
+
+        <h3>12. <span class="underline">과일통조림류(황도 등)</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q12" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q12" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q12" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q12" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q12" value="5"> 1일 1회 이상</label>
+
+        <h3>13. <span class="underline">과일류</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q13" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q13" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q13" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q13" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q13" value="5"> 1일 1회 이상</label>
+
+        <h3>14. <span class="underline">쿠키/크래커류(초코칩 등) 또는 시리얼류</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q14" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q14" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q14" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q14" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q14" value="5"> 1일 1회 이상</label>
+
+        <h3>15. <span class="underline">사탕류 또는 초콜릿류</span>를 평균적으로 얼마나 자주 섭취하는지 선택해 주십시오.</h3>
+        <label><input type="radio" name="q15" value="1"> 월 2~3회 이하</label>
+        <label><input type="radio" name="q15" value="2"> 주 1~2회</label>
+        <label><input type="radio" name="q15" value="3"> 주 3~4회</label>
+        <label><input type="radio" name="q15" value="4"> 주 5~6회</label>
+        <label><input type="radio" name="q15" value="5"> 1일 1회 이상</label>
+
+        <div class="button-group">
+            <button type="button" onclick="history.back()">이전</button>
+            <button type="submit">다음</button>
+        </div>
+    </form>
+</body>
+</html>
