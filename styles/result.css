@@ -43,9 +43,12 @@ h1 {
     color: #4d4d4d;
 }
 h2{
-    text-align: center;
+    margin-left: 20px;
 }
 
+h4{
+    font-size: 1.1em;
+}
 h6 {
     font-size: 3em; /* 글씨 크기를 조정 */
     font-weight: bold; /* 글씨 두께를 굵게 */
@@ -228,6 +231,18 @@ button[type="submit"]:hover {
     margin: 0 auto; /* 중앙 정렬 */
 }
 
+.solutionDescription {
+    padding-left: 30px !important; /* 들여쓰기 추가 */
+    padding-right: 30px !important;
+    font-family: 'Gyeonggi_Batang_Regular', serif; /* 경기천년바탕 Regular 적용 */
+    display: block; /* 블록 형식으로 변경하여 세로 배치 */
+    margin: 20px 0; /* 위아래 여백 추가 */
+    padding: 0;
+    text-align:justify; /* 텍스트 왼쪽 정렬 */
+    max-width: 600px; /* 글씨 영역 너비 제한 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
 .result-image2 {
     width: 600px; /* 너비를 500px로 키움 */
     height: auto; /* 높이를 비율에 맞춰 자동 조정 */
@@ -235,3 +250,5 @@ button[type="submit"]:hover {
     margin: 20px auto; /* 중앙 정렬 */
     border-radius: 15px; /* 모서리를 둥글게 */
 }
+
+

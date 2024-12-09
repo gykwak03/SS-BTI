@@ -46,11 +46,11 @@ function calculateAndRedirect() {
     }
 
     // 조건에 따라 결과 페이지로 이동
-    if (sodiumScore > 60 && sugarScore > 60) {
+    if (sodiumScore > 52 && sugarScore > 49) {
         window.location.href = "../results/result1.html"; // result1.html 경로
-    } else if (sodiumScore > 60) {
+    } else if (sodiumScore > 52) {
         window.location.href = "../results/result2.html"; // result2.html 경로
-    } else if (sugarScore > 60) {
+    } else if (sugarScore > 49) {
         window.location.href = "../results/result3.html"; // result3.html 경로
     } else {
         window.location.href = "../results/result4.html"; // result4.html 경로
